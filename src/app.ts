@@ -1,8 +1,9 @@
 import express from 'express';
 import {calculateProbabilitiesRecursion, calculateProbabilities} from './calculator/montecarlo'
+import {typeOrmConfig} from './config'
 
 const app = express();
-const port = 3000;
+const port = typeOrmConfig.port
 
 app.use(express.json())
 
