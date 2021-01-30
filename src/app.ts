@@ -1,7 +1,7 @@
 import express from 'express';
 import {calculateProbabilitiesRecursion, calculateProbabilities} from './services/calculator/montecarlo'
 import {typeOrmConfig} from './config'
-import {post} from './http/kave'
+import {getTopPosts} from './services/reddit/postService'
 
 const app = express();
 const port = typeOrmConfig.port
@@ -10,7 +10,8 @@ app.use(express.json())
 
 
 app.get('/test', (req, res) => {
-    post('test', 'test')
+    const topArr = getTopPosts('wallstreetbets')
+    res.send(topArr)
 })
 
 
