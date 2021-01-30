@@ -5,10 +5,3 @@ workflows:
   node-tests:
     jobs:
       - node/test
-jobs:
-  build:
-    docker:
-      - image: 
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD
