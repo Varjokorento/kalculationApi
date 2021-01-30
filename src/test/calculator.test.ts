@@ -1,4 +1,4 @@
-import {calculateProbabilities} from '../calculator/montecarlo'
+import {calculateProbabilities} from '../services/calculator/montecarlo'
 import {assert} from 'chai'
 
 
